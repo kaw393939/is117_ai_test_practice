@@ -1,137 +1,285 @@
-# 117 Site
+# 🚀 AI-Assisted Web Development: Build Like a Pro
 
-A static site built with Eleventy (11ty) featuring comprehensive code quality
-gates and Lighthouse CI.
+> **Learn to build production-ready websites using AI coding assistants while
+> maintaining professional code quality standards.**
 
-## Quick Start
+[![Deploy Status](https://github.com/kaw393939/is117_ai_test_practice/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/kaw393939/is117_ai_test_practice/actions)
+[![Live Site](https://img.shields.io/badge/demo-live-success)](https://kaw393939.github.io/is117_ai_test_practice/)
+
+---
+
+## 🎯 What You'll Learn (In 40 Minutes)
+
+This is a **hands-on course** where you'll recreate this entire project using AI
+coding assistants. You'll learn:
+
+✅ How to prompt AI to build quality code ✅ Automated quality gates that catch
+errors ✅ Modern web development workflow ✅ Deploy to production automatically
+
+**No prior experience required** - just follow the lessons in order.
+
+---
+
+## 🎓 Course Structure
+
+### **Part 1: Understanding** (15 minutes)
+
+1. [**What Is This Project?**](docs/lessons/01-what-is-this.md) - 3 min _See
+   what we're building and why it matters_
+
+2. [**Why Quality Gates?**](docs/lessons/02-why-quality-gates.md) - 3 min _The
+   problem with AI-generated code and how to fix it_
+
+3. [**Prompt Engineering Basics**](docs/lessons/03-prompt-engineering-basics.md) -
+   5 min _How to talk to AI coding assistants effectively_
+
+4. [**Setup Your Environment**](docs/lessons/04-setup-your-environment.md) - 5
+   min _Install what you need to get started_
+
+### **Part 2: Building** (20 minutes)
+
+5. [**Build with Eleventy**](docs/lessons/05-build-with-eleventy.md) - 4 min
+   _Create a static website with templates_
+
+6. [**ESLint & Prettier**](docs/lessons/06-eslint-prettier.md) - 4 min
+   _Automatic code quality and formatting_
+
+7. [**Pre-commit Hooks**](docs/lessons/07-pre-commit-hooks.md) - 3 min _Stop bad
+   code before it's committed_
+
+8. [**GitHub Actions**](docs/lessons/08-github-actions.md) - 5 min _Automate
+   testing and deployment_
+
+9. [**Lighthouse CI**](docs/lessons/09-lighthouse-ci.md) - 4 min _Ensure your
+   site is fast and accessible_
+
+### **Part 3: When Things Break** (5 minutes)
+
+10. [**Troubleshooting Guide**](docs/lessons/10-troubleshooting.md) - 5 min
+    _Common issues and how to fix them_
+
+---
+
+## 🎮 Quick Start (For the Impatient)
 
 ```bash
-# Install dependencies
+# 1. Clone and install
+git clone <your-fork>
+cd 117_site
 npm install
 
-# Start development server
+# 2. Start developing
 npm start
 
-# Build for production
-npm run build
-
-# Run all quality checks
-npm test
+# 3. Deploy to GitHub Pages
+git push
 ```
 
-## Features
+**Want to understand what's happening?** Start with
+[Lesson 1](docs/lessons/01-what-is-this.md) 👆
 
-- ✨ **11ty Static Site Generator** - Fast, flexible templating
-- 🎨 **Multiple Template Languages** - Nunjucks, Markdown, HTML
-- 🔍 **ESLint** - JavaScript linting
-- 💅 **Prettier** - Code formatting
-- 🎯 **Stylelint** - CSS linting
-- 📝 **Markdownlint** - Markdown linting
-- 🪝 **Husky + lint-staged** - Pre-commit hooks
-- 🚦 **Lighthouse CI** - Performance, accessibility, SEO checks
-- 🤖 **GitHub Actions** - Automated CI/CD
-- 📚 **VS Code Integration** - Extensions and settings included
+---
 
-## Project Structure
+## 📝 Copy-Paste Prompts
 
-```
-117_site/
-├── src/
-│   ├── _includes/     # Reusable components and partials
-│   ├── _layouts/      # Page layout templates
-│   ├── _data/         # Global data files
-│   ├── assets/        # CSS, JS, images
-│   │   ├── css/
-│   │   ├── js/
-│   │   └── images/
-│   └── index.md       # Homepage
-├── _site/             # Build output (git-ignored)
-├── .github/
-│   └── workflows/     # CI/CD pipelines
-├── docs/
-│   └── AI-GUIDE.md    # Guide for AI coding assistants
-└── .eleventy.js       # 11ty configuration
-```
+Don't want to type? We got you. Pre-written prompts for every step:
 
-## Available Scripts
+- [**Initial Setup Prompts**](docs/prompts/initial-setup.md) - Get started fast
+- [**Configuration Prompts**](docs/prompts/configuration.md) - Set up quality
+  tools
+- [**Building Pages Prompts**](docs/prompts/building-pages.md) - Create content
+- [**Debugging Prompts**](docs/prompts/debugging.md) - Fix issues
 
-- `npm start` - Start development server with live reload
-- `npm run build` - Build site for production
-- `npm run clean` - Clean build directory
-- `npm test` - Run all linters and build
-- `npm run lint` - Run all linters
-- `npm run lint:js` - Lint JavaScript files
-- `npm run lint:css` - Lint CSS files
-- `npm run lint:md` - Lint Markdown files
-- `npm run lint:format` - Check code formatting
-- `npm run format` - Auto-format all files
-- `npm run lighthouse` - Run Lighthouse CI checks
+---
 
-## Code Quality Gates
+## 📚 Quick Reference
 
-All code must pass these checks before commit:
+- [**npm Scripts Cheatsheet**](docs/reference/npm-scripts.md) - All available
+  commands
+- [**File Structure Guide**](docs/reference/file-structure.md) - What each file
+  does
+- [**AI Assistant Guide**](docs/reference/AI-GUIDE.md) - For your AI coding
+  assistant
 
-1. **ESLint** - No JavaScript errors or warnings
-2. **Stylelint** - Valid, formatted CSS
-3. **Prettier** - Consistent code formatting
-4. **Markdownlint** - Clean markdown files
+---
 
-Pre-commit hooks automatically run these checks on staged files.
+## 🎯 Learning Objectives
 
-## Deployment
+By the end of this course, you'll be able to:
 
-The site automatically deploys to GitHub Pages when:
+| Skill                         | What You'll Master                                    |
+| ----------------------------- | ----------------------------------------------------- |
+| 🤖 **AI Prompting**           | Write effective prompts that generate quality code    |
+| 🔍 **Code Quality**           | Use ESLint, Prettier, Stylelint to maintain standards |
+| 🪝 **Git Hooks**              | Automate checks before code enters version control    |
+| 🚀 **CI/CD**                  | Deploy automatically with GitHub Actions              |
+| ⚡ **Performance**            | Build fast, accessible websites with Lighthouse       |
+| 🏗️ **Static Site Generators** | Use Eleventy to build modern websites                 |
+| 🎨 **Modern Web Dev**         | Work with HTML, CSS, JavaScript professionally        |
+| 🐛 **Debugging**              | Troubleshoot issues with AI assistance                |
 
-1. Code is pushed to the `main` branch
-2. All quality checks pass
-3. Lighthouse CI meets performance budgets
-4. Build completes successfully
+---
 
-### GitHub Pages Setup
+## 🎬 Before You Start
 
-1. Go to your repository on GitHub
-2. Navigate to **Settings** → **Pages**
-3. Under **Source**, select **GitHub Actions**
-4. The site will deploy automatically on push to `main`
+### You'll Need:
 
-### GitHub Actions Secrets (Optional)
+- [ ] **A computer** (Mac, Windows, or Linux)
+- [ ] **30-60 minutes** of focused time
+- [ ] **An AI coding assistant** (GitHub Copilot, ChatGPT, Claude, etc.)
+- [ ] **Basic curiosity** about web development
 
-For enhanced Lighthouse CI features, add the following secret:
+### You DON'T Need:
 
-1. Go to repository **Settings** → **Secrets and variables** → **Actions**
-2. Click **New repository secret**
-3. Name: `LHCI_GITHUB_APP_TOKEN`
-4. Value: Your Lighthouse CI GitHub App token
-5. [Learn more about Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci)
+- ❌ Prior coding experience
+- ❌ Deep understanding of web development
+- ❌ To memorize anything (we have copy-paste prompts)
 
-**Note:** The CI/CD pipeline will work without this secret, but Lighthouse
-results won't be posted as GitHub comments.
+---
 
-### Environment Variables
+## 💡 How to Use This Course
 
-Copy `.env.example` to `.env` and update with your values:
+### Option 1: **Guided Path** (Recommended for beginners)
 
-```bash
-cp .env.example .env
-```
+Follow lessons 1-10 in order. Each lesson builds on the previous one.
 
-Edit `.env` with your site configuration:
+### Option 2: **Reference Mode** (For experienced developers)
 
-- `SITE_TITLE` - Your site title
-- `SITE_DESCRIPTION` - Site description for meta tags
-- `SITE_URL` - Production URL (update for GitHub Pages)
-- `SITE_AUTHOR` - Your name
+Jump to specific topics using the table of contents above.
 
-## VS Code Setup
+### Option 3: **Copy-Paste Mode** (For the time-constrained)
 
-Recommended extensions are automatically suggested. Accept the prompt to install
-them for the best development experience.
+Go straight to [prompts](docs/prompts/) and recreate the project.
 
-## Documentation
+---
 
-See [AI-GUIDE.md](docs/AI-GUIDE.md) for detailed documentation aimed at AI
-coding assistants.
+## 🚨 Important Notes
 
-## License
+### ⚠️ #1 AI Pitfall: Code Duplication
 
-MIT
+**AI coding agents LOVE to duplicate code** instead of reusing existing styles,
+functions, and components. This creates unmaintainable bloat.
+
+**YOU MUST:**
+
+- ✅ Check existing code BEFORE asking AI to create
+- ✅ Explicitly tell AI to REUSE existing styles
+- ✅ Review AI output for duplicates
+
+**Read this:**
+[Avoiding Duplication Guide](docs/prompts/avoiding-duplication.md)
+
+### This Project Uses:
+
+- **Eleventy 2.0** - Static site generator
+- **Node.js 20** - JavaScript runtime
+- **GitHub Actions** - CI/CD automation
+- **Lighthouse CI** - Performance testing
+
+### Code Quality Gates:
+
+| Layer             | What It Checks              | When It Runs      |
+| ----------------- | --------------------------- | ----------------- |
+| 🎨 **Editor**     | Real-time errors            | As you type       |
+| 💾 **Save**       | Auto-format code            | When you save     |
+| 🪝 **Pre-commit** | Lint staged files           | Before Git commit |
+| 🤖 **CI/CD**      | Full quality check          | On push to GitHub |
+| ⚡ **Lighthouse** | Performance & accessibility | Before deployment |
+
+---
+
+## 🎓 Who Is This For?
+
+### ✅ Perfect For:
+
+- College students learning web development
+- Developers exploring AI-assisted coding
+- Anyone wanting to build quality websites fast
+- Teams implementing code quality standards
+
+### ⚠️ Not For:
+
+- People looking for no-code solutions
+- Those who don't want to learn (just want a website)
+
+---
+
+## 🌟 What Makes This Different?
+
+### Traditional Coding Courses:
+
+❌ Type everything manually ❌ Memorize syntax ❌ Slow feedback loops ❌ No
+quality enforcement
+
+### This Course:
+
+✅ Use AI to write code ✅ Focus on prompting skills ✅ Instant quality feedback
+✅ Automated quality gates
+
+---
+
+## 📱 TikTok Generation Features
+
+- ⏱️ **Bite-sized lessons** (3-5 minutes each)
+- 🎯 **Clear objectives** at the start of each lesson
+- 💡 **TL;DR sections** for quick scanning
+- 📋 **Copy-paste prompts** for every task
+- ✅ **Checkboxes** to track progress
+- 🎨 **Visual diagrams** showing workflows
+- 🚀 **Instant gratification** with quick wins
+
+---
+
+## 🏆 Challenge Yourself
+
+After completing the course, try these extensions:
+
+- [ ] Add a blog with pagination
+- [ ] Implement dark mode
+- [ ] Add E2E tests with Playwright
+- [ ] Create a contact form
+- [ ] Add image optimization
+- [ ] Implement a search feature
+
+---
+
+## 🤝 Contributing
+
+Found a typo? Have a suggestion? Want to improve a lesson?
+
+1. Fork this repo
+2. Make your changes
+3. Submit a pull request
+
+All contributions welcome! 🎉
+
+---
+
+## 📄 License
+
+MIT License - Use this for learning, teaching, or building your own projects.
+
+---
+
+## 🚀 Ready to Start?
+
+### [👉 Click Here to Begin Lesson 1: What Is This Project?](docs/lessons/01-what-is-this.md)
+
+---
+
+## 💬 Questions?
+
+- 🐛 **Found a bug?**
+  [Open an issue](https://github.com/kaw393939/is117_ai_test_practice/issues)
+- 💡 **Have a question?**
+  [Start a discussion](https://github.com/kaw393939/is117_ai_test_practice/discussions)
+- 🤖 **AI not working?** Check the
+  [Troubleshooting Guide](docs/lessons/10-troubleshooting.md)
+
+---
+
+## 👥 Credits
+
+**Built with ❤️ by students, for students**
+
+Last updated: October 2025
