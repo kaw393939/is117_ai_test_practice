@@ -98,6 +98,8 @@ Don't want to type? We got you. Pre-written prompts for every step:
   commands
 - [**File Structure Guide**](docs/reference/file-structure.md) - What each file
   does
+- [**Duplication Detection**](docs/reference/duplication-detection.md) - How
+  automated checks prevent code bloat
 - [**AI Assistant Guide**](docs/reference/AI-GUIDE.md) - For your AI coding
   assistant
 
@@ -178,13 +180,14 @@ functions, and components. This creates unmaintainable bloat.
 
 ### Code Quality Gates:
 
-| Layer             | What It Checks              | When It Runs      |
-| ----------------- | --------------------------- | ----------------- |
-| 🎨 **Editor**     | Real-time errors            | As you type       |
-| 💾 **Save**       | Auto-format code            | When you save     |
-| 🪝 **Pre-commit** | Lint staged files           | Before Git commit |
-| 🤖 **CI/CD**      | Full quality check          | On push to GitHub |
-| ⚡ **Lighthouse** | Performance & accessibility | Before deployment |
+| Layer              | What It Checks              | When It Runs      |
+| ------------------ | --------------------------- | ----------------- |
+| 🎨 **Editor**      | Real-time errors            | As you type       |
+| 💾 **Save**        | Auto-format code            | When you save     |
+| 🪝 **Pre-commit**  | Lint staged files           | Before Git commit |
+| 🤖 **CI/CD**       | Full quality check          | On push to GitHub |
+| ⚡ **Lighthouse**  | Performance & accessibility | Before deployment |
+| 🚫 **Duplication** | Code/CSS duplication (>10%) | Pre-commit + CI   |
 
 ---
 

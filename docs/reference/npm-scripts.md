@@ -54,7 +54,8 @@ npm run build
 
 ### `npm test`
 
-**What it does:** Runs ALL quality checks (ESLint + Stylelint + Markdownlint)
+**What it does:** Runs ALL quality checks (ESLint + Stylelint + Markdownlint +
+Duplication Check)
 
 **When to use:**
 
@@ -65,7 +66,7 @@ npm run build
 **Command equivalent:**
 
 ```bash
-npm run lint:js && npm run lint:css && npm run lint:md
+npm run lint:js && npm run lint:css && npm run lint:md && npm run lint:duplication
 ```
 
 **Expected output (success):**
@@ -74,6 +75,7 @@ npm run lint:js && npm run lint:css && npm run lint:md
 ✓ All JavaScript files pass ESLint
 ✓ All CSS files pass Stylelint
 ✓ All Markdown files pass markdownlint
+✓ No code duplication detected (0%)
 ```
 
 ---
@@ -147,6 +149,41 @@ npm run lint:css -- --fix
 ```bash
 npm run lint:md -- --fix
 ```
+
+---
+
+### `npm run lint:duplication` 🆕
+
+**What it does:** Detects code duplication across JavaScript, CSS, and HTML
+
+**Tool used:** jscpd (Copy-Paste Detector)
+
+**Threshold:** Fails if >10% of code is duplicated
+
+**Command equivalent:** `jscpd src/`
+
+**Output:**
+
+```bash
+✅ Found 0 clones. Duplication: 0.0%
+# OR
+❌ Found 2 clones. Duplication: 12.5% (threshold: 10%)
+```
+
+**View detailed report:**
+
+```bash
+npm run lint:duplication
+open .jscpd-report/html/index.html
+```
+
+**When to use:**
+
+- Before committing (runs in pre-commit hook)
+- After refactoring
+- To audit codebase health
+
+**Learn more:** [Duplication Detection Guide](duplication-detection.md)
 
 ---
 
@@ -324,15 +361,16 @@ npm run build
 
 ## 📊 Command Comparison
 
-| Command            | Speed  | Scope              | Auto-fix | Use Case                   |
-| ------------------ | ------ | ------------------ | -------- | -------------------------- |
-| `npm start`        | Fast   | Build + serve      | No       | Daily development          |
-| `npm run build`    | Fast   | Build only         | No       | Production build           |
-| `npm test`         | Medium | All quality checks | No       | Comprehensive verification |
-| `npm run lint:js`  | Fast   | JavaScript only    | Yes      | JS-specific checking       |
-| `npm run lint:css` | Fast   | CSS only           | Yes      | CSS-specific checking      |
-| `npm run lint:md`  | Fast   | Markdown only      | Yes      | Markdown-specific checking |
-| `npm run format`   | Fast   | All files          | Yes      | Format everything          |
+| Command                    | Speed  | Scope              | Auto-fix | Use Case                   |
+| -------------------------- | ------ | ------------------ | -------- | -------------------------- |
+| `npm start`                | Fast   | Build + serve      | No       | Daily development          |
+| `npm run build`            | Fast   | Build only         | No       | Production build           |
+| `npm test`                 | Medium | All quality checks | No       | Comprehensive verification |
+| `npm run lint:js`          | Fast   | JavaScript only    | Yes      | JS-specific checking       |
+| `npm run lint:css`         | Fast   | CSS only           | Yes      | CSS-specific checking      |
+| `npm run lint:md`          | Fast   | Markdown only      | Yes      | Markdown-specific checking |
+| `npm run lint:duplication` | Medium | Code duplication   | No       | Detect copy-paste code     |
+| `npm run format`           | Fast   | All files          | Yes      | Format everything          |
 
 ---
 
@@ -518,6 +556,7 @@ npm run
 │   npm run lint:js    Check JavaScript       │
 │   npm run lint:css   Check CSS              │
 │   npm run lint:md    Check Markdown         │
+│   npm run lint:duplication  Check for dupes │
 │                                             │
 │ FORMATTING:                                 │
 │   npm run format     Format all files       │
