@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yourusername.github.io/117_site/sitemap.xml
+Sitemap: https://kaw393939.github.io/is117_ai_test_practice/sitemap.xml
